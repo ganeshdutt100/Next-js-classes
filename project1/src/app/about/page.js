@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 
 const page = () => {
   const [time, setTime] = useState("");
+  const [count, setCount] = useState(0);
   useEffect(() => {
     let interval = setInterval(() => {
       let realTime = new Date().toLocaleTimeString();
@@ -15,9 +16,9 @@ const page = () => {
       <h1>i am about page </h1>
       <button
         className=" bg-purple-600 rounded-md px-5 hover:bg-white hover:text-purple-600"
-        onClick={() => b(a + 1)}
+        onClick={() => setCount(count + 1)}
       >
-        Click me{" "}
+        Click me : {count}
       </button>
       <p>{time}</p>
     </div>
